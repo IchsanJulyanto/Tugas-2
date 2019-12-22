@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Tugas 2</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+      function hitung() {
+        var angka1 = document.getElementById("number1").value;
+        var angka2 = document.getElementById("number2").value;
+        var operator = document.getElementById("operator").value;
+        var total = eval(angka1 + operator + angka2);
+          
+        if (total < 20) {
+          alert("Hasilnya lebih kecil dari 20")
+        } else if (total === 20) {
+          alert("Hasilnya sama dengan 20")
+        } else {
+          alert("Hasilnya lebih besar dari 20")
+        }
+      }
+    </script>
+</head>
+<body>
+    <table>
+      <tr>
+        <td>
+          <input type="text" placeholder="Masukkan angka disini" id="number1">
+          <select name="operator" id="operator">
+            <option value="+">Tambah</option>
+            <option value="-">Kurang</option>
+            <option value="/">Bagi</option>
+            <option value="*">Kali</option>
+        </select>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <input type="text" placeholder="Masukkan angka disini" id="number2">
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <button class="card-button" onclick="hitung()">Hitung</button>
+        </td>
+      </tr>
+    </table>
+</body>
+</html>
